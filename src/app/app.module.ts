@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { AvatarComponent } from './dashboard/avatar/avatar.component';
+import { BackdropComponent } from './dashboard/backdrop/backdrop.component';
+import { StatsComponent } from './dashboard/stats/stats.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { AvatarComponent } from './dashboard/avatar/avatar.component';
     DashboardComponent,
     SidebarComponent,
     AvatarComponent,
+    BackdropComponent,
+    StatsComponent,
   ],
   imports: [
     BrowserModule,
