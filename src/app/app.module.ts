@@ -8,6 +8,12 @@ import { SidebarComponent } from './dashboard/sidebar/sidebar.component';
 import { AvatarComponent } from './dashboard/avatar/avatar.component';
 import { BackdropComponent } from './dashboard/backdrop/backdrop.component';
 import { StatsComponent } from './dashboard/stats/stats.component';
+import { NotificationComponent } from './dashboard/notification/notification.component';
+import { CoursesComponent } from './dashboard/courses/courses.component';
+import { ColorsComponent } from './colors/colors.component';
+import { BannerComponent } from './dashboard/banner/banner.component';
+import { LandingComponent } from './landing/landing.component';
+import { CopyComponent } from './copy/copy.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +23,12 @@ import { StatsComponent } from './dashboard/stats/stats.component';
     AvatarComponent,
     BackdropComponent,
     StatsComponent,
+    NotificationComponent,
+    CoursesComponent,
+    ColorsComponent,
+    BannerComponent,
+    LandingComponent,
+    CopyComponent,
   ],
   imports: [
     BrowserModule,

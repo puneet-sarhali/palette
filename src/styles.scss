@@ -2,11 +2,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@layer base {
+  :root{
+    --my-primary-100: #f3f4f6;
+    --my-primary-200: #e5e7eb;
+    --my-primary-300: #d1d5db;
+    --my-primary-400: #9ca3af;
+    --my-primary-500: #6b7280;
+    --my-primary-600: #4b5563;
+    --my-primary-700: #374151;
+    --my-primary-800: #1f2937;
+    --my-primary-900: #111827;
+    --my-accent-100: #f9fafb;
+    --my-accent-200: #f3f4f6;
+    --my-accent-300: #e5e7eb;
+    --my-accent-400: #d1d5db;
+    --my-accent-500: #9ca3af;
+    --my-accent-600: #6b7280;
+    --my-accent-700: #4b5563;
+    --my-accent-800: #374151;
+    --my-accent-900: #1f2937;
+    --my-success-100: #ecfdf5;
+    --my-success-200: #d1fae5;
+    --my-success-300: #a7f3d0;
+    --my-success-400: #6ee7b7;
+    --my-success-500: #34d399;
+    --my-success-600: #10b981;
+    --my-success-700: #059669;
+    --my-success-800: #047857;
+    --my-success-900: #065f46;
+    --my-warning-100: #fefce8;
+    --my-warning-200: #fef9c3;
+    --my-warning-300: #fef08a;
+    --my-warning-400: #fde047;
+    --my-warning-500: #facc15;
+    --my-warning-600: #eab308;
+    --my-warning-700: #ca8a04;
+    --my-warning-800: #a16207;
+    --my-warning-900: #854d0e;
+    --my-error-100: #fdf2f2;
+    --my-error-200: #fde8e8;
+    --my-error-300: #fbd5d5;
+    --my-error-400: #f8b4b4;
+    --my-error-500: #f98080;
+    --my-error-600: #f05252;
+    --my-error-700: #e02424;
+    --my-error-800: #c81e1e;
+    --my-error-900: #9b1c1c;
+  }
+}
 
 html, body{
-  margin: 2rem;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #c4c4c4;
+  background-color: #fff !important;
+  font-family: 'Roboto';
 }
 

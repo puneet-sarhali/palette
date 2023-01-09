@@ -1,0 +1,8 @@
+<button (click)="onThemeClick()" class="snap-center flex justify-center items-center focus:ring p-4 m-2 bg-gray-200 rounded-lg mb-2">
+  <span class="h-4 w-4 rounded-full" [style.background-color]="theme.primary[700]"></span>
+  <span class="h-4 w-4 -ml-1 rounded-full" [style.background-color]="theme.primary[500]"></span>
+  <span class="h-4 w-4 -ml-1 rounded-full" [style.background-color]="theme.accent[700]"></span>
+  <span class="h-4 w-4 -ml-1 rounded-full" [style.background-color]="theme.accent[500]"></span>
+  <h3 class="ml-2 font-bold">{{ theme.name }}</h3>
+</button>
+

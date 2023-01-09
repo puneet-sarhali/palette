@@ -1,8 +1,18 @@
-<div class="w-full h-[60rem] bg-gray-300 rounded-3xl">
-  <app-backdrop class=""></app-backdrop>
-  <div class="z-10 shadow-xl p-12 rounded-lg w-max -mt-8 ml-8 bg-gray-200 sticky">
-    <app-avatar></app-avatar>
-    <app-sidebar></app-sidebar>
+<div class="border-4 border-gray-300 relative h-full max-w-[22rem] bg-gray-50 rounded-2xl">
+  <div class="w-32 h-6 absolute top-0 right-1/2 bg-gray-300 translate-x-1/2 rounded-b-lg"></div>
+  <div>
+    <div class="flex w-full p-4 mt-4">
+      <app-avatar></app-avatar>
+      <app-notification class="ml-auto"></app-notification>
+    </div>
+    <div class="px-4 py-4">
+      <app-banner></app-banner>
+    </div>
+    <div class="ml-4 mt-2">
+      <app-stats></app-stats>
+    </div>
+    <div class="pb-4 px-4 pt-2">
+      <app-courses></app-courses>
+    </div>
   </div>
-  <app-stats></app-stats>
 </div>
