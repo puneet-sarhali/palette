@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        xxs: '0.6rem'
+      },
       colors: {
         "my-primary": {
           100: "var(--my-primary-100)",

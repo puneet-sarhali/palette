@@ -14,6 +14,9 @@ import { ColorsComponent } from './colors/colors.component';
 import { BannerComponent } from './dashboard/banner/banner.component';
 import { LandingComponent } from './landing/landing.component';
 import { CopyComponent } from './copy/copy.component';
+import { LandingPageComponent } from './views/landing-page/landing-page.component';
+import { PortfolioComponent } from './views/portfolio/portfolio.component';
+import { LgDashboardComponent } from './views/lg-dashboard/lg-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { CopyComponent } from './copy/copy.component';
     BannerComponent,
     LandingComponent,
     CopyComponent,
+    LandingPageComponent,
+    PortfolioComponent,
+    LgDashboardComponent,
   ],
   imports: [
     BrowserModule,
