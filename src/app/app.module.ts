@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -17,6 +16,9 @@ import { CopyComponent } from './copy/copy.component';
 import { LandingPageComponent } from './views/landing-page/landing-page.component';
 import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { LgDashboardComponent } from './views/lg-dashboard/lg-dashboard.component';
+import { FeedbackPageComponent } from './views/feedback-page/feedback-page.component';
+import { ErrorPageComponent } from './views/error-page/error-page.component';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +37,9 @@ import { LgDashboardComponent } from './views/lg-dashboard/lg-dashboard.componen
     LandingPageComponent,
     PortfolioComponent,
     LgDashboardComponent,
+    FeedbackPageComponent,
+    ErrorPageComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
