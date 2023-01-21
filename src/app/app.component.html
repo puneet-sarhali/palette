@@ -1,4 +1,4 @@
-<div class="text-gray-800 p-8 md:p-12">
+<!-- <div class="text-gray-800 p-8 md:p-12">
   <app-landing></app-landing>
   <div class="flex items-center justify-center">
     <h3 class="p-4 rounded-full text-lg font-extrabold bg-gradient-to-b from-blue-300 to-fuchsia-300 inline">1</h3>
@@ -14,10 +14,22 @@
   <h2 class="font-extrabold mt-4 text-gray-800 drop-shadow-md text-4xl text-center">Preview</h2>
   <p class="mb-8 text-center text-gray-500 text-sm">view selected palette in a responsive design</p>
   <app-dashboard class="flex items-center justify-center"></app-dashboard>
+  <app-feedback-page></app-feedback-page>
+  <app-error-page></app-error-page>
   <div class="flex items-center justify-center">
     <h3 class="p-4 mt-16 rounded-full text-lg font-extrabold bg-gradient-to-b from-blue-300 to-fuchsia-300 inline">3</h3>
   </div>
   <h3 class="font-extrabold mt-4 text-gray-800 drop-shadow-md text-4xl text-center">Copy</h3>
   <p class="mb-8 text-center text-gray-500 text-sm">get the css variable for your next project</p>
   <app-copy class="flex justify-center items-center" [variables]="variables" ></app-copy>
+</div> -->
+<div>
+  <div class="flex flex-col overflow-scroll snap-x"  >
+    <app-colors *ngFor="let theme of data" [theme]="theme" (onThemeChange)="onThemeChange($event)"></app-colors>
+  </div>
+  <div class="text-my-gray-700">
+    <app-portfolio></app-portfolio>
+  </div>
+  <app-feedback-page></app-feedback-page>
+  <app-dashboard></app-dashboard>
 </div>

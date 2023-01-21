@@ -42,4 +42,6 @@ export class AppComponent {
     this.changeTheme($event);
     this.variables = $event;
   }
+
+  private views = ["dashboard", "feedback", "portfolio"]
 }

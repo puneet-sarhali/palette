@@ -14,6 +14,9 @@ import { ColorsComponent } from './colors/colors.component';
 import { BannerComponent } from './dashboard/banner/banner.component';
 import { LandingComponent } from './landing/landing.component';
 import { CopyComponent } from './copy/copy.component';
+import { FeedbackPageComponent } from './views/feedback-page/feedback-page.component';
+import { ErrorPageComponent } from './views/error-page/error-page.component';
+import { PortfolioComponent } from './views/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { CopyComponent } from './copy/copy.component';
     BannerComponent,
     LandingComponent,
     CopyComponent,
+    FeedbackPageComponent,
+    ErrorPageComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
