@@ -8,13 +8,18 @@ import themeData from './themeData'
 })
 export class AppComponent {
   data = themeData;
-  variables= themeData[0];
+  variables = themeData[0];
+  viewClicked = {
+    id: 4,
+    name: "Mobile App",
+    img: "mobile-app.png"
+  };
 
   constructor() {
     this.changeTheme(themeData[0])
   }
 
-  private changeTheme(data: any){
+  private changeTheme(data: any) {
     this.changeVar("--my-primary-100", data.primary[100]);
     this.changeVar("--my-primary-200", data.primary[200]);
     this.changeVar("--my-primary-300", data.primary[300]);
@@ -38,10 +43,35 @@ export class AppComponent {
     document.documentElement.style.setProperty(from, to);
   }
 
-  onThemeChange($event: any){
+  onThemeChange($event: any) {
     this.changeTheme($event);
     this.variables = $event;
   }
 
-  private views = ["dashboard", "feedback", "portfolio"]
+  views = [
+    {
+      id: 1,
+      name: "Portfolio",
+      img: "portfolio.png"
+    },
+    {
+      id: 2,
+      name: "Feedback",
+      img: "feedback.png"
+    },
+    {
+      id: 3,
+      name: "Mobile App",
+      img: "mobile-app.png"
+    },
+    {
+      id: 4,
+      name: "Dashboard",
+      img: "dashboard.png"
+    }
+  ]
+
+  onViewClicked(view: { id: number, name: string, img: string }) {
+    this.viewClicked = view;
+  }
 }

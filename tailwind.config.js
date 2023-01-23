@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        xxs: '0.6rem'
+        xxs: '0.65rem'
       },
       colors: {
         "my-primary": {

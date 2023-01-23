@@ -23,19 +23,27 @@
   </div>
   <h3 class="font-extrabold mt-4 text-gray-800 drop-shadow-md text-4xl text-center">Copy</h3>
   <p class="mb-8 text-center text-gray-500 text-sm">get the css variable for your next project</p>
-  <app-copy class="flex justify-center items-center" [variables]="variables" ></app-copy>
+  <app-copy class="flex justify-center items-center" [variables]="variables"></app-copy>
 </div> -->
-<div>
-  <div class="flex flex-col overflow-scroll snap-x">
+<div class="text-black grid grid-cols-9 mx-4 my-16">
+
+  <div class="col-span-1 justify-self-center">
+    <div class="flex" *ngFor="let view of views">
+      <button [ngClass]="{'!bg-my-primary-200': view.id == viewClicked.id}"
+        class="btn text-sm text-gray-800 py-8 mb-4 px-2 bg-my-gray-100 hover:bg-my-primary-100  rounded-lg w-full h-max"
+        (click)="onViewClicked(view)">
+        <img class="mb-2" src="../assets/{{view.img}}" alt="">
+        {{view.name}}
+      </button>
+    </div>
+  </div>
+  <div class="col-span-7 justify-self-center">
+    <app-portfolio *ngIf="viewClicked.id == 1"></app-portfolio>
+    <app-feedback-page *ngIf="viewClicked.id == 2"></app-feedback-page>
+    <app-dashboard *ngIf="viewClicked.id == 3"></app-dashboard>
+    <app-lg-dashboard *ngIf="viewClicked.id == 4"></app-lg-dashboard>
+  </div>
+  <div class="flex flex-col justify-self-center col-span-1">
     <app-colors *ngFor="let theme of data" [theme]="theme" (onThemeChange)="onThemeChange($event)"></app-colors>
   </div>
-  <div class="text-my-gray-700">
-    <app-portfolio></app-portfolio>
-  </div>
-  <app-feedback-page></app-feedback-page>
-  <app-dashboard></app-dashboard>
-</div>
-<div class="text-black">
-  <app-portfolio></app-portfolio>
-  <app-lg-dashboard></app-lg-dashboard>
 </div>
