@@ -28,9 +28,11 @@
 <div class="text-black grid grid-cols-9 mx-4 my-16">
 
   <div class="col-span-1 justify-self-center">
-    <div class="flex" *ngFor="let view of views">
+    <div class="flex relative" *ngFor="let view of views">
       <button [ngClass]="{'!bg-my-primary-200': view.id == viewClicked.id}"
-        class="btn text-sm text-gray-800 py-8 mb-4 px-2 bg-my-gray-100 hover:bg-my-primary-100  rounded-lg w-full h-max"
+        class="hover:after:content-['>'] after:absolute after:-right-8 after:inset-y-auto after:scale-150 
+              flex flex-col !border-none shadow-inner btn text-sm text-gray-800 py-8 mb-4 px-2 
+              bg-my-gray-100 hover:bg-my-primary-100 rounded-lg w-full h-max"
         (click)="onViewClicked(view)">
         <img class="mb-2" src="../assets/{{view.img}}" alt="">
         {{view.name}}

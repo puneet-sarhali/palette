@@ -10,9 +10,9 @@ export class AppComponent {
   data = themeData;
   variables = themeData[0];
   viewClicked = {
-    id: 4,
-    name: "Mobile App",
-    img: "mobile-app.png"
+    id: 1,
+    name: "Portfolio",
+    img: "portfolio.png"
   };
 
   constructor() {
