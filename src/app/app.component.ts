@@ -8,7 +8,7 @@ import themeData from './themeData'
 })
 export class AppComponent {
   data = themeData;
-  variables = themeData[0];
+  selectedPalette = themeData[0];
   viewClicked = {
     id: 1,
     name: "Portfolio",
@@ -54,7 +54,7 @@ export class AppComponent {
 
   onThemeChange($event: any) {
     this.changeTheme($event);
-    this.variables = $event;
+    this.selectedPalette = $event;
   }
 
   views = [
