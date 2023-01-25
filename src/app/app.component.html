@@ -31,11 +31,13 @@
     <div class="flex relative" *ngFor="let view of views">
       <button [ngClass]="{'!bg-my-primary-200': view.id == viewClicked.id}"
         class="hover:after:content-['>'] after:absolute after:-right-8 after:inset-y-auto after:scale-[2] after:my-primary-700
-              flex flex-col !border-none shadow-inner btn text-sm text-gray-800 py-8 mb-4 px-2 
+              flex flex-col !border-none shadow-inner btn text-sm text-gray-800 py-8 mb-4 px-4 
               bg-my-gray-100 hover:bg-my-primary-100 rounded-lg w-full h-max"
         (click)="onViewClicked(view)">
-        <img class="mb-2" src="../assets/{{view.img}}" alt="">
-        {{view.name}}
+        <div class="mb-4">
+          <img src="../assets/{{view.img}}" alt="" height="50" width="50">
+        </div>
+        <h4 class="text-xs">{{view.name}}</h4>
       </button>
     </div>
   </div>
