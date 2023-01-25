@@ -32,6 +32,7 @@ module.exports = {
           900: "var(--my-accent-900)",
         },
         "my-gray": {
+          50: "var(--my-gray-50)",
           100: "var(--my-gray-100)",
           200: "var(--my-gray-200)",
           300: "var(--my-gray-300)",

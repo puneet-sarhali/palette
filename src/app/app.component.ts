@@ -38,6 +38,15 @@ export class AppComponent {
     this.changeVar("--my-accent-700", data.accent[700]);
     this.changeVar("--my-accent-800", data.accent[800]);
     this.changeVar("--my-accent-900", data.accent[900]);
+    this.changeVar("--my-gray-100", data.gray[100]);
+    this.changeVar("--my-gray-200", data.gray[200]);
+    this.changeVar("--my-gray-300", data.gray[300]);
+    this.changeVar("--my-gray-400", data.gray[400]);
+    this.changeVar("--my-gray-500", data.gray[500]);
+    this.changeVar("--my-gray-600", data.gray[600]);
+    this.changeVar("--my-gray-700", data.gray[700]);
+    this.changeVar("--my-gray-800", data.gray[800]);
+    this.changeVar("--my-gray-900", data.gray[900]);
   }
   private changeVar(from: string, to: string) {
     document.documentElement.style.setProperty(from, to);
