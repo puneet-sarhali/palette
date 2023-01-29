@@ -10,7 +10,7 @@ export class AppComponent {
   data = themeData;
   selectedPalette = themeData[0];
   viewClicked = {
-    id: 1,
+    id: 3,
     name: "Portfolio",
     img: "portfolio.png"
   };
@@ -47,6 +47,16 @@ export class AppComponent {
     this.changeVar("--my-gray-700", data.gray[700]);
     this.changeVar("--my-gray-800", data.gray[800]);
     this.changeVar("--my-gray-900", data.gray[900]);
+    this.changeVar("--bg", data.bg);
+    this.changeVar("--bg-focus", data["bg-focus"]);
+    this.changeVar("--primary-clear", data["primary-clear"]);
+    this.changeVar("--primary-dull", data["primary-dull"]);
+    this.changeVar("--accent-clear", data["accent-clear"]);
+    this.changeVar("--accent-dull", data["accent-dull"]);
+    this.changeVar("--text-clear", data["text-clear"]);
+    this.changeVar("--text-dull", data["text-dull"]);
+
+
   }
   private changeVar(from: string, to: string) {
     document.documentElement.style.setProperty(from, to);
@@ -77,7 +87,7 @@ export class AppComponent {
       id: 4,
       name: "Dashboard",
       img: "dashboard.png"
-    }
+    },
   ]
 
   onViewClicked(view: { id: number, name: string, img: string }) {
