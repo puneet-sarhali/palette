@@ -41,8 +41,8 @@ let themeData = [
     "primary-dull": "#dbeafe",
     "accent-clear": "#a21caf",
     "accent-dull": "#fae8ff",
-    "text-clear": "#f8fafc",
-    "text-dull": "#94a3b8"
+    "clear": "#e2e8f0",
+    "dull": "#cbd5e1"
   },
   {
     "name": "greenAmber",
@@ -80,6 +80,14 @@ let themeData = [
       "800": "#292524",
       "900": "#1c1917",
     },
+    "bg": "#fafaf9",
+    "bg-focus": "#f5f5f4",
+    "primary-clear": "#15803d",
+    "primary-dull": "#bbf7d0",
+    "accent-clear": "#b45309",
+    "accent-dull": "#fde68a",
+    "clear": "#292524",
+    "dull": "#78716c"
   },
   {
     "name": "pinkBeige",

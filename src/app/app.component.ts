@@ -53,8 +53,8 @@ export class AppComponent {
     this.changeVar("--primary-dull", data["primary-dull"]);
     this.changeVar("--accent-clear", data["accent-clear"]);
     this.changeVar("--accent-dull", data["accent-dull"]);
-    this.changeVar("--text-clear", data["text-clear"]);
-    this.changeVar("--text-dull", data["text-dull"]);
+    this.changeVar("--clear", data["clear"]);
+    this.changeVar("--dull", data["dull"]);
 
 
   }

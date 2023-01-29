@@ -82,8 +82,8 @@ module.exports = {
         'primary-dull': 'var(--primary-dull)',
         'accent-clear': 'var(--accent-clear)',
         'accent-dull': 'var(--accent-dull)',
-        'text-clear': 'var(--text-clear)',
-        'text-dull': 'var(--text-dull)',
+        'clear': 'var(--clear)',
+        'dull': 'var(--dull)',
       }
     },
   },
