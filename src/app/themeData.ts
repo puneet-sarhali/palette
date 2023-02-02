@@ -36,13 +36,13 @@ let themeData = [
       "900": "#0f172a",
     },
     "bg": "#1e293b",
-    "bg-focus": "#475569",
+    "bg-focus": "#334155",
     "primary-clear": "#2563eb",
-    "primary-dull": "#dbeafe",
-    "accent-clear": "#a21caf",
+    "primary-dull": "#bfdbfe",
+    "accent-clear": "#d946ef",
     "accent-dull": "#fae8ff",
-    "clear": "#e2e8f0",
-    "dull": "#cbd5e1"
+    "clear": "#cbd5e1",
+    "dull": "#94a3b8"
   },
   {
     "name": "greenAmber",
@@ -82,12 +82,14 @@ let themeData = [
     },
     "bg": "#fafaf9",
     "bg-focus": "#f5f5f4",
-    "primary-clear": "#15803d",
+    "primary-clear": "#86efac",
     "primary-dull": "#bbf7d0",
-    "accent-clear": "#b45309",
+    "accent-clear": "#fcd34d",
     "accent-dull": "#fde68a",
     "clear": "#292524",
-    "dull": "#78716c"
+    "dull": "#78716c",
+    "inverse-clear": "#292524",
+    "inverse-dull": "#78716c"
   },
   {
     "name": "pinkBeige",
@@ -125,7 +127,25 @@ let themeData = [
       "800": "#292524",
       "900": "#1c1917",
     },
+    "bg": "#FFFBF5",
+    "bg-focus": "#F7EFE5",
+    "primary-clear": "#9a3197",
+    "primary-dull": "#f5d7f7",
+    "accent-clear": "#f59e0b",
+    "accent-dull": "#fef3c7",
+    "clear": "#292524",
+    "dull": "#78716c"
   },
+  {
+    "bg": "#222831",
+    "bg-focus": "#393E46",
+    "primary-clear": "#00ADB5",
+    "primary-dull": "#AAE3E2",
+    "accent-clear": "#D9ACF5",
+    "accent-dull": "#FFCEFE",
+    "clear": "#EEEEEE",
+    "dull": "#FDEBED"
+  }
 
 ]
 
