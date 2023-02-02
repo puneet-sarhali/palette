@@ -18,6 +18,8 @@ import { PortfolioComponent } from './views/portfolio/portfolio.component';
 import { LgDashboardComponent } from './views/lg-dashboard/lg-dashboard.component';
 import { FeedbackPageComponent } from './views/feedback-page/feedback-page.component';
 import { ErrorPageComponent } from './views/error-page/error-page.component';
+import { Portfolio2Component } from './views/portfolio2/portfolio2.component';
+import { Landing2Component } from './views/landing2/landing2.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { ErrorPageComponent } from './views/error-page/error-page.component';
     FeedbackPageComponent,
     ErrorPageComponent,
     PortfolioComponent,
+    Portfolio2Component,
+    Landing2Component,
   ],
   imports: [
     BrowserModule,

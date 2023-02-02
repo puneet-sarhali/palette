@@ -8,9 +8,9 @@ import themeData from './themeData'
 })
 export class AppComponent {
   data = themeData;
-  variables = themeData[0];
+  selectedPalette = themeData[0];
   viewClicked = {
-    id: 1,
+    id: 4,
     name: "Portfolio",
     img: "portfolio.png"
   };
@@ -20,33 +20,45 @@ export class AppComponent {
   }
 
   private changeTheme(data: any) {
-    this.changeVar("--my-primary-100", data.primary[100]);
-    this.changeVar("--my-primary-200", data.primary[200]);
-    this.changeVar("--my-primary-300", data.primary[300]);
-    this.changeVar("--my-primary-400", data.primary[400]);
-    this.changeVar("--my-primary-500", data.primary[500]);
-    this.changeVar("--my-primary-600", data.primary[600]);
-    this.changeVar("--my-primary-700", data.primary[700]);
-    this.changeVar("--my-primary-800", data.primary[800]);
-    this.changeVar("--my-primary-900", data.primary[900]);
-    this.changeVar("--my-accent-100", data.accent[100]);
-    this.changeVar("--my-accent-200", data.accent[200]);
-    this.changeVar("--my-accent-300", data.accent[300]);
-    this.changeVar("--my-accent-400", data.accent[400]);
-    this.changeVar("--my-accent-500", data.accent[500]);
-    this.changeVar("--my-accent-600", data.accent[600]);
-    this.changeVar("--my-accent-700", data.accent[700]);
-    this.changeVar("--my-accent-800", data.accent[800]);
-    this.changeVar("--my-accent-900", data.accent[900]);
-    this.changeVar("--my-gray-100", data.gray[100]);
-    this.changeVar("--my-gray-200", data.gray[200]);
-    this.changeVar("--my-gray-300", data.gray[300]);
-    this.changeVar("--my-gray-400", data.gray[400]);
-    this.changeVar("--my-gray-500", data.gray[500]);
-    this.changeVar("--my-gray-600", data.gray[600]);
-    this.changeVar("--my-gray-700", data.gray[700]);
-    this.changeVar("--my-gray-800", data.gray[800]);
-    this.changeVar("--my-gray-900", data.gray[900]);
+    // this.changeVar("--my-primary-100", data.primary[100]);
+    // this.changeVar("--my-primary-200", data.primary[200]);
+    // this.changeVar("--my-primary-300", data.primary[300]);
+    // this.changeVar("--my-primary-400", data.primary[400]);
+    // this.changeVar("--my-primary-500", data.primary[500]);
+    // this.changeVar("--my-primary-600", data.primary[600]);
+    // this.changeVar("--my-primary-700", data.primary[700]);
+    // this.changeVar("--my-primary-800", data.primary[800]);
+    // this.changeVar("--my-primary-900", data.primary[900]);
+    // this.changeVar("--my-accent-100", data.accent[100]);
+    // this.changeVar("--my-accent-200", data.accent[200]);
+    // this.changeVar("--my-accent-300", data.accent[300]);
+    // this.changeVar("--my-accent-400", data.accent[400]);
+    // this.changeVar("--my-accent-500", data.accent[500]);
+    // this.changeVar("--my-accent-600", data.accent[600]);
+    // this.changeVar("--my-accent-700", data.accent[700]);
+    // this.changeVar("--my-accent-800", data.accent[800]);
+    // this.changeVar("--my-accent-900", data.accent[900]);
+    // this.changeVar("--my-gray-100", data.gray[100]);
+    // this.changeVar("--my-gray-200", data.gray[200]);
+    // this.changeVar("--my-gray-300", data.gray[300]);
+    // this.changeVar("--my-gray-400", data.gray[400]);
+    // this.changeVar("--my-gray-500", data.gray[500]);
+    // this.changeVar("--my-gray-600", data.gray[600]);
+    // this.changeVar("--my-gray-700", data.gray[700]);
+    // this.changeVar("--my-gray-800", data.gray[800]);
+    // this.changeVar("--my-gray-900", data.gray[900]);
+    this.changeVar("--bg", data.bg);
+    this.changeVar("--bg-focus", data["bg-focus"]);
+    this.changeVar("--primary-clear", data["primary-clear"]);
+    this.changeVar("--primary-dull", data["primary-dull"]);
+    this.changeVar("--primary-visible", data["primary-visible"]);
+    this.changeVar("--accent-clear", data["accent-clear"]);
+    this.changeVar("--accent-dull", data["accent-dull"]);
+    this.changeVar("--clear", data["clear"]);
+    this.changeVar("--dull", data["dull"]);
+    this.changeVar("--duller", data["duller"]);
+
+
   }
   private changeVar(from: string, to: string) {
     document.documentElement.style.setProperty(from, to);
@@ -54,30 +66,45 @@ export class AppComponent {
 
   onThemeChange($event: any) {
     this.changeTheme($event);
-    this.variables = $event;
+    this.selectedPalette = $event;
   }
 
   views = [
-    {
-      id: 1,
-      name: "Portfolio",
-      img: "portfolio.png"
-    },
-    {
-      id: 2,
-      name: "Feedback",
-      img: "feedback.png"
-    },
+    // {
+    //   id: 1,
+    //   name: "Portfolio",
+    //   img: "portfolio.png"
+    // },
+    // {
+    //   id: 2,
+    //   name: "Feedback",
+    //   img: "feedback.png"
+    // },
     {
       id: 3,
       name: "Mobile App",
-      img: "mobile-app.png"
+      img: "remember_me"
     },
     {
       id: 4,
       name: "Dashboard",
-      img: "dashboard.png"
-    }
+      img: "dashboard"
+    },
+    // {
+    //   id: 5,
+    //   name: "Landing Page",
+    //   img: "dashboard.png"
+    // },
+    {
+      id: 6,
+      name: "Portfolio",
+      img: "assignment_ind"
+    },
+    {
+      id: 7,
+      name: "Landing Page",
+      img: "flight_land"
+    },
   ]
 
   onViewClicked(view: { id: number, name: string, img: string }) {

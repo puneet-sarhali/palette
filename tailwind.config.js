@@ -75,7 +75,17 @@ module.exports = {
           700: "var(--my-error-700)",
           800: "var(--my-error-800)",
           900: "var(--my-error-900)",
-        }
+        },
+        'bg': 'var(--bg)',
+        'bg-focus': 'var(--bg-focus)',
+        'primary-clear': 'var(--primary-clear)',
+        'primary-dull': 'var(--primary-dull)',
+        'primary-visible': 'var(--primary-visible)',
+        'accent-clear': 'var(--accent-clear)',
+        'accent-dull': 'var(--accent-dull)',
+        'clear': 'var(--clear)',
+        'dull': 'var(--dull)',
+        'duller': 'var(--duller)'
       }
     },
   },
