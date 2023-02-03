@@ -144,7 +144,7 @@ let themeData = [
     "accent-clear": "#D9ACF5",
     "accent-dull": "#FFCEFE",
     "clear": "#EEEEEE",
-    "dull": "#FDEBED"
+    "dull": "#a8a29e"
   }
 
 ]
