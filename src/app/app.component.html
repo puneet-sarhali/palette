@@ -25,32 +25,41 @@
   <p class="mb-8 text-center text-gray-500 text-sm">get the css variable for your next project</p>
   <app-copy class="flex justify-center items-center" [variables]="variables"></app-copy>
 </div> -->
-<div class="text-black grid grid-cols-9 px-4 py-16 bg-bg-focus h-screen">
-  <div class="col-span-1 justify-self-center">
-    <div class="flex relative" *ngFor="let view of views">
-      <button
-        [ngClass]="{'!border-2 !bg-bg !border-my-primary-300 !shadow-lg !shadow-my-primary-300 translate-x-2 transition-all': view.id == viewClicked.id}"
-        class="flex flex-col justify-center items-center border border-bg-focus hover:border-my-primary-300 shadow-inner text-sm text-clear py-4 mb-4 px-4 
-              bg-bg hover:bg-bg-focus rounded-lg w-full h-max" (click)="onViewClicked(view)">
-        <span class="material-symbols-rounded text-clear p-3 rounded-full bg-bg-focus mb-4 border border-bg">
-          {{view.img}}
-        </span>
-        <h4 class="text-xs">{{view.name}}</h4>
-      </button>
+<div class="">
+  <div class="text-black grid grid-cols-1 xl:grid-cols-9  min-h-screen min-w-screen">
+
+    <div class="col-span-2 grid grid-cols-2 bg-gray-400 p-8">
+      <div class="flex xl:flex-col gap-x-4 justify-self-center">
+        <div class="relative" *ngFor="let view of visibleViews">
+          <button
+            [ngClass]="{'!border-2 !bg-bg !border-my-primary-300 !shadow-lg !shadow-my-primary-300 transition-all': view.id == viewClicked.id}"
+            class="flex flex-col justify-center items-center border-2 border-bg-focus shadow-lg hover:border-my-primary-300 shadow-inner text-sm text-clear py-4 mb-4 px-4 
+                  bg-gray-700 hover:bg-bg-focus rounded-lg w-full h-max" (click)="onViewClicked(view)">
+            <span class="material-symbols-rounded text-clear p-3 rounded-full bg-bg-focus mb-4 border border-bg">
+              {{view.img}}
+            </span>
+            <h4 class="text-xs">{{view.name}}</h4>
+          </button>
+        </div>
+      </div>
+      <div class="flex xl:flex-col justify-self-center h-min gap-y-2 gap-x-2">
+        <app-colors class="w-full"
+          [ngClass]="{'border-2  border-my-primary-300 shadow-lg shadow-my-primary-200 transition-all': selectedPalette == theme}"
+          *ngFor="let theme of data" [theme]="theme" (onThemeChange)="onThemeChange($event)"></app-colors>
+      </div>
     </div>
-  </div>
-  <div class="col-span-7 justify-self-center">
-    <app-portfolio *ngIf="viewClicked.id == 1"></app-portfolio>
-    <app-feedback-page *ngIf="viewClicked.id == 2"></app-feedback-page>
-    <app-dashboard *ngIf="viewClicked.id == 3"></app-dashboard>
-    <app-lg-dashboard *ngIf="viewClicked.id == 4"></app-lg-dashboard>
-    <app-landing-page *ngIf="viewClicked.id == 5"></app-landing-page>
-    <app-portfolio2 *ngIf="viewClicked.id == 6"></app-portfolio2>
-    <app-landing2 *ngIf="viewClicked.id == 7"></app-landing2>
-  </div>
-  <div class="flex flex-col justify-self-center col-span-1 w-full gap-y-4">
-    <app-colors class="w-full"
-      [ngClass]="{'border-2 rounded-xl border-my-primary-300 shadow-lg shadow-my-primary-200 -translate-x-2 transition-all': selectedPalette == theme}"
-      *ngFor="let theme of data" [theme]="theme" (onThemeChange)="onThemeChange($event)"></app-colors>
+
+    <div class="xl:col-span-7 flex justify-center items-center relative bg-bg-focus w-full">
+      <div class="sticky top-0 left-0">
+        <app-portfolio *ngIf="viewClicked.id == 1"></app-portfolio>
+        <app-feedback-page *ngIf="viewClicked.id == 2"></app-feedback-page>
+        <app-dashboard *ngIf="viewClicked.id == 3"></app-dashboard>
+        <app-lg-dashboard class="lg:opacity-100 opacity-0" *ngIf="viewClicked.id == 4"></app-lg-dashboard>
+        <app-landing-page *ngIf="viewClicked.id == 5"></app-landing-page>
+        <app-portfolio2 *ngIf="viewClicked.id == 6"></app-portfolio2>
+        <app-landing2 *ngIf="viewClicked.id == 7"></app-landing2>
+      </div>
+    </div>
+
   </div>
 </div>

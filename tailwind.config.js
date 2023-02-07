@@ -80,10 +80,12 @@ module.exports = {
         'bg-focus': 'var(--bg-focus)',
         'primary-clear': 'var(--primary-clear)',
         'primary-dull': 'var(--primary-dull)',
+        'primary-visible': 'var(--primary-visible)',
         'accent-clear': 'var(--accent-clear)',
         'accent-dull': 'var(--accent-dull)',
         'clear': 'var(--clear)',
         'dull': 'var(--dull)',
+        'duller': 'var(--duller)'
       }
     },
   },

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import themeData from './themeData'
 
 @Component({
@@ -8,9 +8,10 @@ import themeData from './themeData'
 })
 export class AppComponent {
   data = themeData;
+  innerWidth = 0;
   selectedPalette = themeData[0];
   viewClicked = {
-    id: 4,
+    id: 7,
     name: "Portfolio",
     img: "portfolio.png"
   };
@@ -51,10 +52,12 @@ export class AppComponent {
     this.changeVar("--bg-focus", data["bg-focus"]);
     this.changeVar("--primary-clear", data["primary-clear"]);
     this.changeVar("--primary-dull", data["primary-dull"]);
+    this.changeVar("--primary-visible", data["primary-visible"]);
     this.changeVar("--accent-clear", data["accent-clear"]);
     this.changeVar("--accent-dull", data["accent-dull"]);
     this.changeVar("--clear", data["clear"]);
     this.changeVar("--dull", data["dull"]);
+    this.changeVar("--duller", data["duller"]);
 
 
   }
@@ -67,17 +70,7 @@ export class AppComponent {
     this.selectedPalette = $event;
   }
 
-  views = [
-    // {
-    //   id: 1,
-    //   name: "Portfolio",
-    //   img: "portfolio.png"
-    // },
-    // {
-    //   id: 2,
-    //   name: "Feedback",
-    //   img: "feedback.png"
-    // },
+  visibleViews = [
     {
       id: 3,
       name: "Mobile App",
@@ -88,11 +81,6 @@ export class AppComponent {
       name: "Dashboard",
       img: "dashboard"
     },
-    // {
-    //   id: 5,
-    //   name: "Landing Page",
-    //   img: "dashboard.png"
-    // },
     {
       id: 6,
       name: "Portfolio",
@@ -105,7 +93,51 @@ export class AppComponent {
     },
   ]
 
+  allViews = [
+    {
+      id: 3,
+      name: "Mobile App",
+      img: "remember_me"
+    },
+    {
+      id: 4,
+      name: "Dashboard",
+      img: "dashboard"
+    },
+    {
+      id: 6,
+      name: "Portfolio",
+      img: "assignment_ind"
+    },
+    {
+      id: 7,
+      name: "Landing Page",
+      img: "flight_land"
+    },
+  ]
+
+  mobileViews = [{
+    id: 3,
+    name: "Mobile App",
+    img: "remember_me"
+  }]
+
   onViewClicked(view: { id: number, name: string, img: string }) {
     this.viewClicked = view;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: number) {
+    this.innerWidth = window.innerWidth;
+    if (this.innerWidth <= 1024) {
+      this.visibleViews = this.mobileViews;
+      this.viewClicked = {
+        id: 3,
+        name: "Mobile App",
+        img: "remember_me"
+      };
+    } else {
+      this.visibleViews = this.allViews;
+    }
   }
 }
