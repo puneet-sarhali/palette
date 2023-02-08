@@ -1,6 +1,6 @@
-<div class="flex mb-8 border-4 border-white shadow-lg">
+<div class="flex mb-8 border-2 border-white shadow-lg text-sm">
   <button (click)="copyMessage(variables['bg'])"
-    class="relative group w-12 h-16 bg-primary-clear hover:w-32 transition-all flex justify-center items-center"
+    class="relative group w-10 h-16 bg-primary-clear hover:w-40 transition-all flex justify-center items-center"
     [ngClass]="{'text-white': pickTextColor(variables['primary-clear']) === false, 'text-black': pickTextColor(variables['primary-clear']) === true }">
     <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
       {{variables['primary-clear']}}</h6>
@@ -9,7 +9,7 @@
     </span>
   </button>
   <button (click)="copyMessage(variables['bg'])"
-    class="relative group w-12 h-16 bg-primary-dull hover:w-32 transition-all flex justify-center items-center focus:ring-2"
+    class="relative group w-10 h-16 bg-primary-dull hover:w-40 transition-all flex justify-center items-center focus:ring-2"
     [ngClass]="{'text-white': pickTextColor(variables['primary-dull']) === false, 'text-black': pickTextColor(variables['primary-dull']) === true }">
     <h6 class="group-hover:visible invisible group-focus:hidden">
       {{variables['primary-dull']}}</h6>
@@ -17,11 +17,11 @@
       copied!
     </span>
   </button>
-  <div class="w-12 h-16 bg-primary-visible hover:w-32 transition-all"></div>
-  <div class="w-12 h-16 bg-accent-clear hover:w-32 transition-all"></div>
-  <div class="w-12 h-16 bg-accent-dull hover:w-32 transition-all"></div>
-  <div class="w-12 h-16 bg-bg-focus hover:w-32 transition-all"></div>
-  <div class="w-12 h-16 bg-clear hover:w-32 transition-all"></div>
-  <div class="w-12 h-16 bg-dull hover:w-32 transition-all"></div>
-  <div class="w-12 h-16 bg-duller hover:w-32 transition-all"></div>
+  <div class="w-10 h-16 bg-primary-visible hover:w-40 transition-all"></div>
+  <div class="w-10 h-16 bg-accent-clear hover:w-40 transition-all"></div>
+  <div class="w-10 h-16 bg-accent-dull hover:w-40 transition-all"></div>
+  <div class="w-10 h-16 bg-bg-focus hover:w-40 transition-all"></div>
+  <div class="w-10 h-16 bg-clear hover:w-40 transition-all"></div>
+  <div class="w-10 h-16 bg-dull hover:w-40 transition-all"></div>
+  <div class="w-10 h-16 bg-duller hover:w-40 transition-all"></div>
 </div>

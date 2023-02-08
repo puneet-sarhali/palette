@@ -70,7 +70,7 @@ export class AppComponent {
     this.selectedPalette = $event;
   }
 
-  visibleViews = [
+  visibleViews: { id: number, name: string, img: string }[] | null = [
     {
       id: 3,
       name: "Mobile App",
@@ -117,9 +117,7 @@ export class AppComponent {
   ]
 
   mobileViews = [{
-    id: 3,
-    name: "Mobile App",
-    img: "remember_me"
+
   }]
 
   onViewClicked(view: { id: number, name: string, img: string }) {
@@ -130,7 +128,7 @@ export class AppComponent {
   onResize(event: number) {
     this.innerWidth = window.innerWidth;
     if (this.innerWidth <= 1024) {
-      this.visibleViews = this.mobileViews;
+      this.visibleViews = null;
       this.viewClicked = {
         id: 3,
         name: "Mobile App",
