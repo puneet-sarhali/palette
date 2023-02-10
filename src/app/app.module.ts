@@ -20,6 +20,11 @@ import { FeedbackPageComponent } from './views/feedback-page/feedback-page.compo
 import { ErrorPageComponent } from './views/error-page/error-page.component';
 import { Portfolio2Component } from './views/portfolio2/portfolio2.component';
 import { Landing2Component } from './views/landing2/landing2.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAnalytics, getAnalytics, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { providePerformance, getPerformance } from '@angular/fire/performance';
 
 
 @NgModule({
@@ -47,9 +52,15 @@ import { Landing2Component } from './views/landing2/landing2.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    //provideAnalytics(() => getAnalytics()),
+    provideFirestore(() => getFirestore()),
+    providePerformance(() => getPerformance())
   ],
-  providers: [],
+  providers: [
+    ScreenTrackingService, UserTrackingService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

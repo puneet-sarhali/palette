@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { delay } from 'rxjs';
 
 @Component({
@@ -42,5 +42,7 @@ export class CopyComponent implements OnInit {
     return (((r * 0.299) + (g * 0.587) + (b * 0.114)) > 186) ?
       true : false;
   }
+
+
 
 }

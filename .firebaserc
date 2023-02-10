@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "palette-previewer": {
+      "hosting": {
+        "palette": [
+          "palette-previewer"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "palette-previewer"
+  }
+}

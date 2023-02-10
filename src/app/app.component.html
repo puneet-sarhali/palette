@@ -26,17 +26,18 @@
   <app-copy class="flex justify-center items-center" [variables]="variables"></app-copy>
 </div> -->
 <div class="">
-  <div class="text-black grid grid-cols-1 xl:grid-cols-9  min-h-screen min-w-screen relative">
+  <div class="text-black flex flex-col xl:grid xl:grid-cols-12  min-h-screen min-w-screen relative">
 
-    <section class="col-span-1 bg-gray-400 p-4 z-10 h-full max-h-screen overflow-scroll sticky top-0 right-0">
-      <div class="flex xl:flex-col justify-self-center h-min gap-y-2 gap-x-2">
+    <section
+      class="xl:col-span-2 bg-gray-400 p-4 z-10 h-full w-full lg:max-h-screen overflow-scroll sticky top-0 right-0">
+      <div class="flex xl:flex-col justify-self-center h-min w-fit gap-y-2 gap-x-2">
         <app-colors class="w-full rounded-lg hover:translate-x-2 duration-300 transition-all"
           [ngClass]="{'translate-x-2 shadow-lg shadow-my-primary-200 transition-all': selectedPalette == theme}"
           *ngFor="let theme of data" [theme]="theme" (onThemeChange)="onThemeChange($event)"></app-colors>
       </div>
     </section>
 
-    <div class="xl:col-span-8 flex flex-col items-center bg-bg-focus w-full">
+    <div class="xl:col-span-10 flex flex-col items-center bg-bg-focus w-full min-h-screen">
       <div class="flex gap-x-4 justify-self-center m-4">
         <div class="relative" *ngFor="let view of visibleViews">
           <button
@@ -53,7 +54,7 @@
 
       <app-copy [variables]="selectedPalette"></app-copy>
 
-      <div >
+      <div>
         <app-portfolio *ngIf="viewClicked.id == 1"></app-portfolio>
         <app-feedback-page *ngIf="viewClicked.id == 2"></app-feedback-page>
         <app-dashboard *ngIf="viewClicked.id == 3"></app-dashboard>
