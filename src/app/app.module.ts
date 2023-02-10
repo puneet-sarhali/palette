@@ -25,6 +25,7 @@ import { environment } from '../environments/environment';
 import { provideAnalytics, getAnalytics, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { providePerformance, getPerformance } from '@angular/fire/performance';
+import { EmailComponent } from './email/email.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { providePerformance, getPerformance } from '@angular/fire/performance';
     PortfolioComponent,
     Portfolio2Component,
     Landing2Component,
+    EmailComponent,
   ],
   imports: [
     BrowserModule,
