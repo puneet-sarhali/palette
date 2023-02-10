@@ -31,7 +31,7 @@ export class CopyComponent implements OnInit {
     document.execCommand('copy');
     document.body.removeChild(selBox);
     this.copyClicked = true;
-    setTimeout(() => { this.copyClicked = false }, 1000)
+    setTimeout(() => { this.copyClicked = false }, 500)
   }
 
   pickTextColor(bgColor: string) {

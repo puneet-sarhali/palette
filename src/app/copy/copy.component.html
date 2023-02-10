@@ -1,5 +1,5 @@
 <div class="flex mb-8 border-2 border-white shadow-lg text-sm">
-  <button (click)="copyMessage(variables['bg'])"
+  <button (click)="copyMessage(variables['primary-clear'])"
     class="relative group w-10 h-16 bg-primary-clear hover:w-40 transition-all flex justify-center items-center"
     [ngClass]="{'text-white': pickTextColor(variables['primary-clear']) === false, 'text-black': pickTextColor(variables['primary-clear']) === true }">
     <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
@@ -8,20 +8,101 @@
       [ngClass]="{'opacity-100': copyClicked === true}"> copied!
     </span>
   </button>
-  <button (click)="copyMessage(variables['bg'])"
-    class="relative group w-10 h-16 bg-primary-dull hover:w-40 transition-all flex justify-center items-center focus:ring-2"
+
+  <button (click)="copyMessage(variables['primary-dull'])"
+    class="relative group w-10 h-16 bg-primary-dull hover:w-40 transition-all flex justify-center items-center"
     [ngClass]="{'text-white': pickTextColor(variables['primary-dull']) === false, 'text-black': pickTextColor(variables['primary-dull']) === true }">
-    <h6 class="group-hover:visible invisible group-focus:hidden">
+    <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
       {{variables['primary-dull']}}</h6>
-    <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4 group-focus:opacity-100">
-      copied!
+    <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
+      [ngClass]="{'opacity-100': copyClicked === true}"> copied!
     </span>
   </button>
-  <div class="w-10 h-16 bg-primary-visible hover:w-40 transition-all"></div>
-  <div class="w-10 h-16 bg-accent-clear hover:w-40 transition-all"></div>
+
+  <button (click)="copyMessage(variables['primary-visible'])"
+    class="relative group w-10 h-16 bg-primary-visible hover:w-40 transition-all flex justify-center items-center"
+    [ngClass]="{'text-white': pickTextColor(variables['primary-visible']) === false, 'text-black': pickTextColor(variables['primary-visible']) === true }">
+    <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
+      {{variables['primary-visible']}}</h6>
+    <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
+      [ngClass]="{'opacity-100': copyClicked === true}"> copied!
+    </span>
+  </button>
+
+  <button (click)="copyMessage(variables['accent-clear'])"
+    class="relative group w-10 h-16 bg-accent-clear hover:w-40 transition-all flex justify-center items-center"
+    [ngClass]="{'text-white': pickTextColor(variables['accent-clear']) === false, 'text-black': pickTextColor(variables['accent-clear']) === true }">
+    <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
+      {{variables['accent-clear']}}</h6>
+    <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
+      [ngClass]="{'opacity-100': copyClicked === true}"> copied!
+    </span>
+  </button>
+
+  <button (click)="copyMessage(variables['accent-dull'])"
+    class="relative group w-10 h-16 bg-accent-dull hover:w-40 transition-all flex justify-center items-center"
+    [ngClass]="{'text-white': pickTextColor(variables['accent-dull']) === false, 'text-black': pickTextColor(variables['accent-dull']) === true }">
+    <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
+      {{variables['accent-dull']}}</h6>
+    <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
+      [ngClass]="{'opacity-100': copyClicked === true}"> copied!
+    </span>
+  </button>
+
+  <button (click)="copyMessage(variables['bg'])"
+    class="relative group w-10 h-16 bg-bg hover:w-40 transition-all flex justify-center items-center"
+    [ngClass]="{'text-white': pickTextColor(variables['bg']) === false, 'text-black': pickTextColor(variables['bg']) === true }">
+    <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
+      {{variables['bg']}}</h6>
+    <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
+      [ngClass]="{'opacity-100': copyClicked === true}"> copied!
+    </span>
+  </button>
+
+  <button (click)="copyMessage(variables['bg-focus'])"
+    class="relative group w-10 h-16 bg-bg-focus hover:w-40 transition-all flex justify-center items-center"
+    [ngClass]="{'text-white': pickTextColor(variables['bg-focus']) === false, 'text-black': pickTextColor(variables['bg-focus']) === true }">
+    <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
+      {{variables['bg-focus']}}</h6>
+    <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
+      [ngClass]="{'opacity-100': copyClicked === true}"> copied!
+    </span>
+  </button>
+
+  <button (click)="copyMessage(variables['clear'])"
+    class="relative group w-10 h-16 bg-clear hover:w-40 transition-all flex justify-center items-center"
+    [ngClass]="{'text-white': pickTextColor(variables['clear']) === false, 'text-black': pickTextColor(variables['clear']) === true }">
+    <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
+      {{variables['clear']}}</h6>
+    <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
+      [ngClass]="{'opacity-100': copyClicked === true}"> copied!
+    </span>
+  </button>
+
+  <button (click)="copyMessage(variables['dull'])"
+    class="relative group w-10 h-16 bg-dull hover:w-40 transition-all flex justify-center items-center"
+    [ngClass]="{'text-white': pickTextColor(variables['dull']) === false, 'text-black': pickTextColor(variables['dull']) === true }">
+    <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
+      {{variables['dull']}}</h6>
+    <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
+      [ngClass]="{'opacity-100': copyClicked === true}"> copied!
+    </span>
+  </button>
+
+  <button (click)="copyMessage(variables['duller'])"
+    class="relative group w-10 h-16 bg-duller hover:w-40 transition-all flex justify-center items-center"
+    [ngClass]="{'text-white': pickTextColor(variables['duller']) === false, 'text-black': pickTextColor(variables['duller']) === true }">
+    <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
+      {{variables['duller']}}</h6>
+    <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
+      [ngClass]="{'opacity-100': copyClicked === true}"> copied!
+    </span>
+  </button>
+
+  <!-- <div class="w-10 h-16 bg-accent-clear hover:w-40 transition-all"></div>
   <div class="w-10 h-16 bg-accent-dull hover:w-40 transition-all"></div>
   <div class="w-10 h-16 bg-bg-focus hover:w-40 transition-all"></div>
   <div class="w-10 h-16 bg-clear hover:w-40 transition-all"></div>
   <div class="w-10 h-16 bg-dull hover:w-40 transition-all"></div>
-  <div class="w-10 h-16 bg-duller hover:w-40 transition-all"></div>
+  <div class="w-10 h-16 bg-duller hover:w-40 transition-all"></div> -->
 </div>

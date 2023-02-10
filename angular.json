@@ -109,5 +109,8 @@
       }
     }
   },
-  "defaultProject": "palette"
+  "defaultProject": "palette",
+  "cli": {
+    "analytics": false
+  }
 }
