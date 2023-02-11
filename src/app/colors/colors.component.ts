@@ -9,6 +9,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ColorsComponent implements OnInit {
   @Input() theme: any;
   @Output() onThemeChange = new EventEmitter;
+  @Input() selectedTheme: any;
   constructor() {
 
   }
