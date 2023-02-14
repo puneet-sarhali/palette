@@ -1,4 +1,8 @@
 <div class="flex mb-8 border-2 border-white shadow-lg text-sm">
+  <button [cdkCopyToClipboard]="variables['primary-clear']"
+    class="relative group w-10 h-16 bg-primary-clear hover:w-40 transition-all flex justify-center items-center">
+
+  </button>
   <div (click)="copyMessage(variables['primary-clear'])"
     class="relative group w-10 h-16 bg-primary-clear hover:w-40 transition-all flex justify-center items-center"
     [ngClass]="{'text-white': pickTextColor(variables['primary-clear']) === false, 'text-black': pickTextColor(variables['primary-clear']) === true }">
