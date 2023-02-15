@@ -1,5 +1,12 @@
 <div class="flex mb-8 border-2 border-white shadow-lg text-sm">
-  <div (click)="copyMessage(variables['primary-clear'])"
+  <button [cdkCopyToClipboard]="variables['primary-clear']"
+    class="group relative group w-10 h-16 bg-primary-clear hover:w-40 transition-all flex justify-center items-center"
+    [ngClass]="{'text-white': pickTextColor(variables['primary-clear']) === false, 'text-black': pickTextColor(variables['primary-clear']) === true }">
+    <span class="group-hover:inline hidden group-focus:hidden">{{ variables['primary-clear'] }}</span>
+    <span class="group-focus:group-hover:inline hidden">copied</span>
+  </button>
+
+  <!-- <div (click)="copyMessage(variables['primary-clear'])"
     class="relative group w-10 h-16 bg-primary-clear hover:w-40 transition-all flex justify-center items-center"
     [ngClass]="{'text-white': pickTextColor(variables['primary-clear']) === false, 'text-black': pickTextColor(variables['primary-clear']) === true }">
     <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
@@ -7,7 +14,7 @@
     <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
       [ngClass]="{'opacity-100': copyClicked === true}"> copied!
     </span>
-  </div>
+  </div> -->
 
   <div (click)="copyMessage(variables['primary-dull'])"
     class="relative group w-10 h-16 bg-primary-dull hover:w-40 transition-all flex justify-center items-center"

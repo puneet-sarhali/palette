@@ -1,4 +1,5 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Clipboard } from '@angular/cdk/clipboard';
 import { delay } from 'rxjs';
 
 @Component({
@@ -10,7 +11,7 @@ import { delay } from 'rxjs';
 export class CopyComponent implements OnInit {
   @Input() variables: any;
   copyClicked = false;
-  constructor() {
+  constructor(private clipboard: Clipboard) {
 
   }
 
@@ -43,6 +44,8 @@ export class CopyComponent implements OnInit {
       true : false;
   }
 
+  copy() {
 
+  }
 
 }
