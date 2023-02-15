@@ -9,15 +9,15 @@ import themeData from './themeData'
 export class AppComponent {
   data = themeData;
   innerWidth = 0;
-  selectedPalette = themeData[0];
+  selectedPalette = themeData[9];
   viewClicked = {
-    id: 7,
+    id: 4,
     name: "Portfolio",
     img: "portfolio.png"
   };
 
   constructor() {
-    this.changeTheme(themeData[0])
+    this.changeTheme(themeData[9])
   }
 
   private changeTheme(data: any) {

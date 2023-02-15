@@ -9,8 +9,11 @@ import { Component, OnInit } from '@angular/core';
 export class Portfolio2Component implements OnInit {
 
   constructor() { }
+  dark = false;
 
   ngOnInit(): void {
   }
+
+
 
 }
