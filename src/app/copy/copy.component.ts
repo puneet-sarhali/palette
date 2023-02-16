@@ -44,8 +44,5 @@ export class CopyComponent implements OnInit {
       true : false;
   }
 
-  copy() {
-
-  }
 
 }
