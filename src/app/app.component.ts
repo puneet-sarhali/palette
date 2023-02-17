@@ -17,7 +17,18 @@ export class AppComponent {
   };
 
   constructor() {
-    this.changeTheme(themeData[1])
+    this.changeTheme(themeData[1]);
+    this.innerWidth = window.innerWidth;
+    if (this.innerWidth <= 1024) {
+      this.visibleViews = null;
+      this.viewClicked = {
+        id: 3,
+        name: "Mobile App",
+        img: "remember_me"
+      };
+    } else {
+      this.visibleViews = this.allViews;
+    }
   }
 
   private changeTheme(data: any) {
