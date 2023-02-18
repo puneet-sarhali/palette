@@ -4,7 +4,7 @@ let themeData = [
     "bg": "#1e293b",
     "bg-focus": "#334155",
     "primary-clear": "#2563eb",
-    "primary-dull": "#bfdbfe",
+    "primary-dull": "#598EF3",
     "primary-visible": "#D3E6FE",
     "accent-clear": "#d946ef",
     "accent-dull": "#fae8ff",
@@ -28,15 +28,15 @@ let themeData = [
   {
     "name": "pinkBeige",
     "bg": "#FFFBF5",
-    "bg-focus": "#F7EFE5",
+    "bg-focus": "#FAF4EC",
     "primary-clear": "#9a3197",
-    "primary-dull": "#f5d7f7",
+    "primary-dull": "#E084CD",
     "primary-visible": "#fdf6fd",
     "accent-clear": "#f59e0b",
     "accent-dull": "#fef3c7",
     "clear": "#292524",
     "dull": "#78716c",
-    "duller": "#EAD5BA"
+    "duller": "#E5D5C0"
   },
   {
     "bg": "#222831",
@@ -44,7 +44,7 @@ let themeData = [
     "primary-clear": "#00ADB5",
     "primary-dull": "#AAE3E2",
     "primary-visible": "#fdf6fd",
-    "accent-clear": "#D9ACF5",
+    "accent-clear": "#AC7DD2",
     "accent-dull": "#fff4ff",
     "clear": "#EEEEEE",
     "dull": "#C5C5C5",
