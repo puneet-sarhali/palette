@@ -35,4 +35,25 @@ export class DataService {
       }]
     )
   }
+
+  incrementLike(id: number) {
+    return this.supabase.rpc('increment', { row_id: id });
+  }
+
+  addToSaved(paletteId: number) {
+    let palettes = localStorage.getItem("palettes")
+    if (palettes) {
+      let palettesArr = JSON.parse(palettes) as Array<number>;
+      palettesArr.push(paletteId);
+      localStorage.setItem('palettes', JSON.stringify(palettesArr));
+    } else {
+      localStorage.setItem('palettes', JSON.stringify([paletteId]));
+    }
+  }
+
+  getSavedPalettes() {
+    const palettes = localStorage.getItem("palettes")
+    if (palettes)
+      return JSON.parse(palettes);
+  }
 }

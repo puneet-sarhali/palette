@@ -12,6 +12,8 @@ export class AppComponent implements OnInit {
   data: any | null = null;
   innerWidth = 0;
   selectedPalette: any;
+  savedPalettes: Array<number>
+
   viewClicked = {
     id: 4,
     name: "Portfolio",
@@ -40,6 +42,8 @@ export class AppComponent implements OnInit {
 
       console.log(this.data);
     });
+
+    this.savedPalettes = this.dataService.getSavedPalettes();
   }
 
   async ngOnInit(): Promise<void> {
@@ -82,9 +86,18 @@ export class AppComponent implements OnInit {
     document.documentElement.style.setProperty(from, to);
   }
 
-  async onThemeChange($event: any) {
+  onThemeChange($event: any) {
     this.changeTheme($event);
     this.selectedPalette = $event;
+  }
+
+  async onSaved($event: number) {
+    try {
+      await this.dataService.incrementLike($event);
+    } catch (err) {
+      console.log(err);
+    }
+    this.dataService.addToSaved($event);
   }
 
   visibleViews: { id: number, name: string, img: string }[] | null = [

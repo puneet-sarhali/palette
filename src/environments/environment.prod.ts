@@ -8,5 +8,7 @@ export const environment = {
     messagingSenderId: '957699641551',
     measurementId: 'G-NY7V8XYWD7',
   },
+  supabaseUrl: 'https://jsuifmbqefnxytqwmaoy.supabase.co',
+  supabaseKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpzdWlmbWJxZWZueHl0cXdtYW95Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2NzcwMjE1ODMsImV4cCI6MTk5MjU5NzU4M30.09YStNMblCJmFgb9BvpbrGEv4vVyePe3zSI7KeVzVTU',
   production: true
 };

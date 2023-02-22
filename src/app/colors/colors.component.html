@@ -12,9 +12,12 @@
     <span class="h-5 w-5 -ml-2 rounded-full z-20" [style.background-color]="theme['accentClear']"></span>
     <span class="h-5 w-5 -ml-2 rounded-full z-10" [style.background-color]="theme['accentDull']"></span>
   </button>
-  <button class="group flex items-center mt-1">
-    <span class="material-symbols-rounded text-sm mr-1 hover:text-red-600">
+  <button (click)="onSavedOutput(theme['id'])" class="group flex items-center mt-1">
+    <span *ngIf="!isSaved" class="material-symbols-rounded text-sm mr-1 hover:text-red-600">
       favorite
+    </span>
+    <span *ngIf="isSaved" class="material-symbols-rounded text-sm mr-1 text-red-600">
+      recommend
     </span>
     <h3 class="text-gray-500 text-xs">{{ theme['likes'] }}</h3>
   </button>

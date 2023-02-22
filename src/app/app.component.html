@@ -33,7 +33,8 @@
       <section class="bg-slate-100 pt-4  z-10 h-full lg:max-h-screen overflow-scroll sticky top-0 right-0">
         <div *ngIf="data" class="flex xl:flex-col justify-self-center gap-y-4 gap-x-4">
           <app-colors *ngFor="let theme of data" [selectedTheme]="selectedPalette" [theme]="theme"
-            (onThemeChange)="onThemeChange($event)"></app-colors>
+            [savedPalettes]="savedPalettes" (onSaved)="onSaved($event)" (onThemeChange)="onThemeChange($event)">
+          </app-colors>
         </div>
       </section>
     </div>
