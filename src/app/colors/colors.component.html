@@ -2,12 +2,21 @@
 <!-- <span class="material-symbols-rounded mr-2 text-gray-500 text-sm p-2 bg-gray-300 rounded-lg">
     favorite
     </span> -->
-<button [style.background-color]="theme['bg']" (click)="onThemeClick()"
-  class="hover:bg-my-gray-200 w-full shadow-inner snap-center flex justify-center items-center py-3 px-6 bg-gray-100 rounded-lg w-full rounded-lg xl:hover:translate-x-2 xl:hover:translate-y-0 hover:translate-y-2 duration-300 transition-all"
-  [ngClass]="{'xl:translate-x-2 xl:translate-y-0 translate-y-2  transition-all': selectedTheme == theme}">
-  <span class="h-5 w-5 rounded-full" [style.background-color]="theme['primary-clear']"></span>
-  <span class="h-5 w-5 -ml-1 rounded-full" [style.background-color]="theme['primary-dull']"></span>
-  <span class="h-5 w-5 -ml-1 rounded-full" [style.background-color]="theme['accent-clear']"></span>
-  <span class="h-5 w-5 -ml-1 rounded-full" [style.background-color]="theme['accent-dull']"></span>
-</button>
+<div class="border-b border-slate-200 px-8 inline-block">
+  <button (click)="onThemeClick()"
+    class="bg-white w-full shadow-xl flex justify-center items-center py-3 px-6 rounded-lg w-full rounded-lg hover:bg-gray-200 transition-all"
+    [ngClass]="{'!bg-gray-400 transition-all': selectedTheme == theme}">
+    <span class="h-5 w-5 rounded-full z-50" [style.background-color]="theme['bg']"></span>
+    <span class="h-5 w-5 -ml-2 rounded-full z-40" [style.background-color]="theme['primaryClear']"></span>
+    <span class="h-5 w-5 -ml-2 rounded-full z-30" [style.background-color]="theme['primaryDull']"></span>
+    <span class="h-5 w-5 -ml-2 rounded-full z-20" [style.background-color]="theme['accentClear']"></span>
+    <span class="h-5 w-5 -ml-2 rounded-full z-10" [style.background-color]="theme['accentDull']"></span>
+  </button>
+  <button class="group flex items-center mt-1">
+    <span class="material-symbols-rounded text-sm mr-1 hover:text-red-600">
+      favorite
+    </span>
+    <h3 class="text-gray-500 text-xs">{{ theme['likes'] }}</h3>
+  </button>
+</div>
 <!-- </div> -->

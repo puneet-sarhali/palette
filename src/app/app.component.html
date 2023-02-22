@@ -1,47 +1,50 @@
-<!-- <div class="text-gray-800 p-8 md:p-12">
-  <app-landing></app-landing>
-  <div class="flex items-center justify-center">
-    <h3 class="p-4 rounded-full text-lg font-extrabold bg-gradient-to-b from-blue-300 to-fuchsia-300 inline">1</h3>
-  </div>
-  <h2 class="font-extrabold mt-4 text-gray-800 drop-shadow-md text-4xl text-center">Select</h2>
-  <p class="mb-8 text-center text-gray-500 text-sm">explore 100+ palettes</p>
-  <div class="flex overflow-scroll snap-x">
-    <app-colors *ngFor="let theme of data" [theme]="theme" (onThemeChange)="onThemeChange($event)"></app-colors>
-  </div>
-  <div class="flex items-center justify-center">
-    <h3 class="p-4 mt-16 rounded-full text-lg font-extrabold bg-gradient-to-b from-blue-200 to-fuchsia-200 inline">2
-    </h3>
-  </div>
-  <h2 class="font-extrabold mt-4 text-gray-800 drop-shadow-md text-4xl text-center">Preview</h2>
-  <p class="mb-8 text-center text-gray-500 text-sm">view selected palette in a responsive design</p>
-  <app-dashboard class="flex items-center justify-center"></app-dashboard>
-  <app-feedback-page></app-feedback-page>
-  <app-error-page></app-error-page>
-  <div class="flex items-center justify-center">
-    <h3 class="p-4 mt-16 rounded-full text-lg font-extrabold bg-gradient-to-b from-blue-300 to-fuchsia-300 inline">3
-    </h3>
-  </div>
-  <h3 class="font-extrabold mt-4 text-gray-800 drop-shadow-md text-4xl text-center">Copy</h3>
-  <p class="mb-8 text-center text-gray-500 text-sm">get the css variable for your next project</p>
-  <app-copy class="flex justify-center items-center" [variables]="variables"></app-copy>
-</div> -->
 <div class="">
   <div class="text-black flex flex-col xl:flex-row min-h-screen min-w-screen relative">
 
-    <section class="bg-gray-400 px-8 py-4 z-10 h-full lg:max-h-screen overflow-scroll sticky top-0 right-0">
-      <div class="flex xl:flex-col justify-self-center h-min w-fit gap-y-2 gap-x-4">
-        <app-colors *ngFor="let theme of data" [selectedTheme]="selectedPalette" [theme]="theme"
-          (onThemeChange)="onThemeChange($event)"></app-colors>
-      </div>
-    </section>
+    <div class="flex flex-col">
+      <div
+        class="w-48 text-gray-700 bg-white border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <button type="button"
+          class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 hover:bg-gray-100 hover:text-green-700 focus:z-10 focus:ring-2 focus:ring-green-700 focus:text-green-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
+          <span class="material-symbols-rounded mr-2 p-2 bg-green-100 text-green-600 rounded-full">
+            trending_up
+          </span>
+          Popular
+        </button>
+        <button type="button"
+          class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
+          <span class="material-symbols-rounded mr-2 p-2 bg-blue-100 text-blue-600 rounded-full">
+            cake
+          </span>
+          New
+        </button>
+        <button type="button"
+          class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-200 hover:bg-gray-100 hover:text-pink-700 focus:z-10 focus:ring-2 focus:ring-pink-700 focus:text-pink-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-500 dark:focus:text-white">
+          <span class="material-symbols-rounded mr-2 p-2 bg-pink-100 text-pink-600 rounded-full">
+            favorite
+          </span>
+          Saved
+        </button>
 
-    <div class="flex flex-col items-center bg-bg-focus w-full min-h-screen">
+      </div>
+
+
+
+      <section class="bg-slate-100 pt-4  z-10 h-full lg:max-h-screen overflow-scroll sticky top-0 right-0">
+        <div *ngIf="data" class="flex xl:flex-col justify-self-center gap-y-4 gap-x-4">
+          <app-colors *ngFor="let theme of data" [selectedTheme]="selectedPalette" [theme]="theme"
+            (onThemeChange)="onThemeChange($event)"></app-colors>
+        </div>
+      </section>
+    </div>
+
+    <div class="flex flex-col items-center bg-bg-focus grow min-h-screen">
       <div class="flex gap-x-4 justify-self-center m-4">
         <div class="relative" *ngFor="let view of visibleViews">
           <button
-            [ngClass]="{'!border-2 !bg-bg !border-my-primary-300 !shadow-lg !shadow-my-primary-300 transition-all': view.id == viewClicked.id}"
-            class="flex justify-center items-center border-2 border-bg-focus shadow-lg hover:border-my-primary-300 shadow-inner text-sm text-clear py-2 px-4 
-                  bg-bg hover:bg-bg-focus rounded-lg w-full h-max" (click)="onViewClicked(view)">
+            [ngClass]="{'!border !bg-bg !border-dull !text-clear font-semibold transition-all': view.id == viewClicked.id}"
+            class="flex justify-center items-center border border-bg-focus hover:border-dull shadow-inner text-sm py-2 px-4 
+                  bg-bg hover:bg-bg-focus rounded-lg w-full h-max text-dull" (click)="onViewClicked(view)">
             <span class="material-symbols-rounded text-clear p-2 rounded-full bg-bg-focus border mr-2 border-bg">
               {{view.img}}
             </span>
@@ -49,9 +52,9 @@
           </button>
         </div>
       </div>
-
-      <app-copy [variables]="selectedPalette"></app-copy>
-
+      <div *ngIf="data">
+        <app-copy *ngIf="data" [variables]="selectedPalette"></app-copy>
+      </div>
       <div>
         <app-portfolio *ngIf="viewClicked.id == 1"></app-portfolio>
         <app-feedback-page *ngIf="viewClicked.id == 2"></app-feedback-page>

@@ -25,9 +25,11 @@ import { Landing2Component } from './views/landing2/landing2.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAnalytics, getAnalytics, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { providePerformance, getPerformance } from '@angular/fire/performance';
 import { EmailComponent } from './email/email.component';
+import { AddPaletteComponent } from './add-palette/add-palette.component';
 
 
 @NgModule({
@@ -53,6 +55,7 @@ import { EmailComponent } from './email/email.component';
     Portfolio2Component,
     Landing2Component,
     EmailComponent,
+    AddPaletteComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,8 @@ import { EmailComponent } from './email/email.component';
     FormsModule,
     ClipboardModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    //provideAnalytics(() => getAnalytics()),
+    provideAuth(() => getAuth()),
+    provideAnalytics(() => getAnalytics()),
     provideFirestore(() => getFirestore()),
     providePerformance(() => getPerformance())
   ],

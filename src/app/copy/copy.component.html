@@ -6,51 +6,51 @@
       <span class="group-hover:inline hidden group-focus:hidden">{{ variables['primary-clear'] }}</span>
     </button> -->
 
-    <button (click)="copyMessage(variables['primary-clear'])"
+    <button (click)="copyMessage(variables['primaryClear'])"
       class="relative group w-10 h-16 bg-primary-clear hover:w-40 transition-all flex justify-center items-center"
-      [ngClass]="{'text-white': pickTextColor(variables['primary-clear']) === false, 'text-black': pickTextColor(variables['primary-clear']) === true }">
+      [ngClass]="{'text-white': pickTextColor(variables['primaryClear']) === false, 'text-black': pickTextColor(variables['primaryClear']) === true }">
       <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
-        {{variables['primary-clear']}}</h6>
+        {{variables['primaryClear']}}</h6>
       <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
         [ngClass]="{'opacity-100': copyClicked === true}"> copied!
       </span>
     </button>
 
-    <button (click)="copyMessage(variables['primary-dull'])"
+    <button (click)="copyMessage(variables['primaryDull'])"
       class="relative group w-10 h-16 bg-primary-dull hover:w-40 transition-all flex justify-center items-center"
-      [ngClass]="{'text-white': pickTextColor(variables['primary-dull']) === false, 'text-black': pickTextColor(variables['primary-dull']) === true }">
+      [ngClass]="{'text-white': pickTextColor(variables['primaryDull']) === false, 'text-black': pickTextColor(variables['primaryDull']) === true }">
       <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
-        {{variables['primary-dull']}}</h6>
+        {{variables['primaryDull']}}</h6>
       <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
         [ngClass]="{'opacity-100': copyClicked === true}"> copied!
       </span>
     </button>
 
-    <button (click)="copyMessage(variables['primary-visible'])"
+    <button (click)="copyMessage(variables['primaryVisible'])"
       class="relative group w-10 h-16 bg-primary-visible hover:w-40 transition-all flex justify-center items-center"
-      [ngClass]="{'text-white': pickTextColor(variables['primary-visible']) === false, 'text-black': pickTextColor(variables['primary-visible']) === true }">
+      [ngClass]="{'text-white': pickTextColor(variables['primaryVisible']) === false, 'text-black': pickTextColor(variables['primaryVisible']) === true }">
       <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
-        {{variables['primary-visible']}}</h6>
+        {{variables['primaryVisible']}}</h6>
       <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
         [ngClass]="{'opacity-100': copyClicked === true}"> copied!
       </span>
     </button>
 
-    <button (click)="copyMessage(variables['accent-clear'])"
+    <button (click)="copyMessage(variables['accentClear'])"
       class="relative group w-10 h-16 bg-accent-clear hover:w-40 transition-all flex justify-center items-center"
-      [ngClass]="{'text-white': pickTextColor(variables['accent-clear']) === false, 'text-black': pickTextColor(variables['accent-clear']) === true }">
+      [ngClass]="{'text-white': pickTextColor(variables['accentClear']) === false, 'text-black': pickTextColor(variables['accentClear']) === true }">
       <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
-        {{variables['accent-clear']}}</h6>
+        {{variables['accentClear']}}</h6>
       <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
         [ngClass]="{'opacity-100': copyClicked === true}"> copied!
       </span>
     </button>
 
-    <button (click)="copyMessage(variables['accent-dull'])"
+    <button (click)="copyMessage(variables['accentDull'])"
       class="relative group w-10 h-16 bg-accent-dull hover:w-40 transition-all flex justify-center items-center"
-      [ngClass]="{'text-white': pickTextColor(variables['accent-dull']) === false, 'text-black': pickTextColor(variables['accent-dull']) === true }">
+      [ngClass]="{'text-white': pickTextColor(variables['accentDull']) === false, 'text-black': pickTextColor(variables['accentDull']) === true }">
       <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
-        {{variables['accent-dull']}}</h6>
+        {{variables['accentDull']}}</h6>
       <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
         [ngClass]="{'opacity-100': copyClicked === true}"> copied!
       </span>
@@ -66,11 +66,21 @@
       </span>
     </button>
 
-    <button (click)="copyMessage(variables['bg-focus'])"
+    <button (click)="copyMessage(variables['bgFocus'])"
       class="relative group w-10 h-16 bg-bg-focus hover:w-40 transition-all flex justify-center items-center"
-      [ngClass]="{'text-white': pickTextColor(variables['bg-focus']) === false, 'text-black': pickTextColor(variables['bg-focus']) === true }">
+      [ngClass]="{'text-white': pickTextColor(variables['bgFocus']) === false, 'text-black': pickTextColor(variables['bgFocus']) === true }">
       <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
-        {{variables['bg-focus']}}</h6>
+        {{variables['bgFocus']}}</h6>
+      <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
+        [ngClass]="{'opacity-100': copyClicked === true}"> copied!
+      </span>
+    </button>
+
+    <button (click)="copyMessage(variables['duller'])"
+      class="relative group w-10 h-16 bg-duller hover:w-40 transition-all flex justify-center items-center"
+      [ngClass]="{'text-white': pickTextColor(variables['duller']) === false, 'text-black': pickTextColor(variables['duller']) === true }">
+      <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
+        {{variables['duller']}}</h6>
       <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
         [ngClass]="{'opacity-100': copyClicked === true}"> copied!
       </span>
@@ -96,15 +106,7 @@
       </span>
     </button>
 
-    <button (click)="copyMessage(variables['duller'])"
-      class="relative group w-10 h-16 bg-duller hover:w-40 transition-all flex justify-center items-center"
-      [ngClass]="{'text-white': pickTextColor(variables['duller']) === false, 'text-black': pickTextColor(variables['duller']) === true }">
-      <h6 class="group-hover:visible invisible" [ngClass]="{'hidden': copyClicked === true}">
-        {{variables['duller']}}</h6>
-      <span class="group-hover:visible invisible opacity-0 absolute inset-0 top-4"
-        [ngClass]="{'opacity-100': copyClicked === true}"> copied!
-      </span>
-    </button>
+
 
     <!-- <div class="w-10 h-16 bg-accent-clear hover:w-40 transition-all"></div>
     <div class="w-10 h-16 bg-accent-dull hover:w-40 transition-all"></div>
@@ -120,7 +122,9 @@
   </button> -->
 
   <!-- The button to open modal -->
-  <label for="my-modal-6" class="btn bg-bg text-dull border-dull hover:bg-primary-clear hover:text-primary-visible lowercase"> <span class="material-symbols-rounded mr-2">
+  <label for="my-modal-6"
+    class="btn bg-bg text-dull border-dull hover:bg-primary-clear hover:text-primary-visible lowercase"> <span
+      class="material-symbols-rounded mr-2">
       copy_all
     </span> export</label>
 
@@ -128,6 +132,7 @@
   <input type="checkbox" id="my-modal-6" class="modal-toggle" />
   <div class="modal modal-bottom sm:modal-middle">
     <div class="modal-box bg-bg">
+      <label for="my-modal-6" class="btn btn-sm btn-circle absolute right-3 top-3 bg-bg-focus text-clear">✕</label>
       <h3 class="font-bold text-lg mb-4 text-clear">Copy Palette</h3>
       <pre class="text-clear" #palette>
     --primary-100:{{ variables['primary-clear'] }};
@@ -142,11 +147,9 @@
     --bg-300:{{ variables['duller'] }};
       </pre>
       <div class="modal-action">
-        <label [cdkCopyToClipboard]="palette.textContent!"  for="my-modal-6" class="btn bg-bg-focus text-clear hover:bg-primary-clear hover:text-primary-visible">Copy!</label>
+        <label [cdkCopyToClipboard]="palette.textContent!" for="my-modal-6"
+          class="btn bg-bg-focus text-clear hover:bg-primary-clear hover:text-primary-visible">Copy!</label>
       </div>
     </div>
   </div>
 </div>
-
-
-  
